@@ -36,17 +36,22 @@ class BackBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final myHight = MediaQuery.of(context).size.height;
-    return Container(
-      height: myHight * .07,
-      width: myHight * .07,
-      decoration: BoxDecoration(
-        border: Border.all(color: kBlueColor, width: 2),
-        shape: BoxShape.circle,
-      ),
-      child: Icon(
-        Icons.arrow_back_rounded,
-        size: myHight * .03,
-        color: kBlueColor,
+    return GestureDetector(
+      onTap: () {
+        BlocProvider.of<OnBoardingCubit>(context).backBtn();
+      },
+      child: Container(
+        height: myHight * .07,
+        width: myHight * .07,
+        decoration: BoxDecoration(
+          border: Border.all(color: kBlueColor, width: 2),
+          shape: BoxShape.circle,
+        ),
+        child: Icon(
+          Icons.arrow_back_rounded,
+          size: myHight * .03,
+          color: kBlueColor,
+        ),
       ),
     );
   }

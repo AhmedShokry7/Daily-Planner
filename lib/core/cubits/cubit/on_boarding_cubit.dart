@@ -2,7 +2,6 @@ import 'package:bloc/bloc.dart';
 import 'package:daily_planner/core/data/on_boarding_list.dart';
 import 'package:daily_planner/core/strings.dart';
 import 'package:flutter/widgets.dart';
-import 'package:meta/meta.dart';
 
 part 'on_boarding_state.dart';
 
@@ -10,7 +9,9 @@ class OnBoardingCubit extends Cubit<OnBoardingState> {
   int currentPage = 0;
   late PageController pageController;
 
-  OnBoardingCubit() : super(OnBoardingInitial());
+  OnBoardingCubit() : super(OnBoardingInitial()) {
+    pageController = PageController(initialPage: currentPage);
+  }
 
   void changePage(int page) {
     currentPage = page;
