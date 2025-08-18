@@ -12,6 +12,15 @@ const String onBoardingTwoImage = "assets/images/onboarding_2.png";
 const String onBoardingThreeImage = "assets/images/onboarding_3.png";
 
 // icons
+const String homeRegular = "assets/icons/home_outline.png";
+const String homeBold = "assets/icons/home_bold.png";
+const String categoryRegular = "assets/icons/category_outline.png";
+const String categoryBold = "assets/icons/category_bold.png";
+const String profileRegular = "assets/icons/profile_outline.png";
+const String profileBold = "assets/icons/profile_bold.png";
+const String settingsRegular = "assets/icons/setting_outline.png";
+const String settingsBold = "assets/icons/setting_bold.png";
+const String trash = "assets/icons/trash_bold.png";
 
 // Colors
 const Color kBlueColor = Color(0xff2B7AF4);
