@@ -7,29 +7,28 @@ class OnBoardingButtonsAndSliderDotes extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final myHight = MediaQuery.of(context).size.height;
     final myWidth = MediaQuery.of(context).size.width;
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: myWidth * .05),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          NextOrBackBtn(),
+          const NextOrBackBtn(icon: Icons.arrow_back_rounded),
           Row(
             children: [
               ...List.generate(
                 3,
                 (context) => AnimatedContainer(
-                  margin: EdgeInsets.only(right: 8),
+                  margin: const EdgeInsets.only(right: 8),
                   height: 10,
                   width: 20,
-                  decoration: BoxDecoration(color: kBlueColor),
-                  duration: Duration(milliseconds: 500),
+                  decoration: const BoxDecoration(color: kBlueColor),
+                  duration: const Duration(milliseconds: 500),
                 ),
               ),
             ],
           ),
-          NextOrBackBtn(),
+          const NextOrBackBtn(),
         ],
       ),
     );

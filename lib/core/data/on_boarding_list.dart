@@ -1,5 +1,5 @@
 import 'package:daily_planner/core/strings.dart';
-import 'package:daily_planner/models/on_boarding_model.dart';
+import 'package:daily_planner/core/models/on_boarding_model.dart';
 
 List<OnBoardingModel> onBoardingList = [
   OnBoardingModel(

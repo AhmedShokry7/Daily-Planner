@@ -1,4 +1,5 @@
 import 'package:daily_planner/core/strings.dart';
+import 'package:daily_planner/ui/views/bootm_navigation_bar_view.dart';
 import 'package:daily_planner/ui/views/get_started_view.dart';
 import 'package:daily_planner/ui/views/on_boarding_view.dart';
 import 'package:flutter/material.dart';
@@ -23,6 +24,7 @@ class DailyPlanner extends StatelessWidget {
       routes: {
         getStartedView: (context) => const GetStartedView(),
         onSplashView: (context) => const OnBoardingView(),
+        bottomNavigationBarView: (context) => const BootmNavigationBarView(),
       },
     );
   }
