@@ -16,7 +16,6 @@ class DailyPlanner extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        brightness: Brightness.light,
         scaffoldBackgroundColor: Colors.white,
         fontFamily: "Poppins",
       ),

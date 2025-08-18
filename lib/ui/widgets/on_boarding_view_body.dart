@@ -11,9 +11,10 @@ class OnBoardingViewBody extends StatelessWidget {
     return const SafeArea(
       child: Column(
         children: [
+          SizedBox(height: 12),
           SkipBtn(),
           SizedBox(height: 24),
-          Expanded(flex: 3, child: OnBoardingPageview()),
+          Expanded(flex: 4, child: OnBoardingPageview()),
           Expanded(child: OnBoardingButtonsAndSliderDotes()),
         ],
       ),

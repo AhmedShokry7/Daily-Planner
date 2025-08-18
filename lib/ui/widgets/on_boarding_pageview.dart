@@ -17,16 +17,14 @@ class OnBoardingPageview extends StatelessWidget {
         final cubit = BlocProvider.of<OnBoardingCubit>(context);
         return PageView.builder(
           controller: cubit.pageController,
-          onPageChanged: (value) {
-            cubit.changePage(value);
-          },
+          onPageChanged: (value) => cubit.changePage(value),
           scrollDirection: Axis.horizontal,
           itemCount: onBoardingList.length,
           itemBuilder: (context, index) => Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              SizedBox(height: myHight * .01),
               Image.asset(onBoardingList[index].image),
+              SizedBox(height: myHight * .01),
               Padding(
                 padding: EdgeInsets.symmetric(
                   horizontal: myWidth * .05,
@@ -49,7 +47,7 @@ class OnBoardingPageview extends StatelessWidget {
                   onBoardingList[index].body,
                   style: TextStyle(
                     fontSize: myHight * .018,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w500,
                     color: kGreyColor,
                   ),
                 ),

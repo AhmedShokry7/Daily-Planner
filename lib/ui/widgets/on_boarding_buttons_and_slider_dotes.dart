@@ -36,7 +36,9 @@ class OnBoardingButtonsAndSliderDotes extends StatelessWidget {
                       width: myWidth * .035,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(100),
-                        color: currentPage == index ? kBlueColor : kGreyColor,
+                        color: currentPage == index
+                            ? kBlueColor
+                            : kGreyColor.withValues(alpha: .5),
                       ),
                       duration: const Duration(milliseconds: 300),
                     ),
