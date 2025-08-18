@@ -12,7 +12,7 @@ class GetStartedViewBody extends StatelessWidget {
       child: Column(
         children: [
           Expanded(child: Image.asset(getStartedImage)),
-          const Expanded(child: CustomGetStartedContainer()),
+          const Expanded(child: GetStartedContainer()),
         ],
       ),
     );

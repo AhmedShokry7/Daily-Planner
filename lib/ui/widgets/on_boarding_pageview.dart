@@ -25,9 +25,13 @@ class OnBoardingPageview extends StatelessWidget {
           itemBuilder: (context, index) => Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
+              SizedBox(height: myHight * .01),
               Image.asset(onBoardingList[index].image),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: myWidth * .05),
+                padding: EdgeInsets.symmetric(
+                  horizontal: myWidth * .05,
+                  vertical: myHight * .02,
+                ),
                 child: Text(
                   textAlign: TextAlign.center,
                   onBoardingList[index].title,

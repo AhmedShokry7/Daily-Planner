@@ -2,8 +2,8 @@ import 'package:daily_planner/core/strings.dart';
 import 'package:daily_planner/ui/widgets/custom_material_button.dart';
 import 'package:flutter/material.dart';
 
-class CustomGetStartedContainer extends StatelessWidget {
-  const CustomGetStartedContainer({super.key});
+class GetStartedContainer extends StatelessWidget {
+  const GetStartedContainer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,25 +24,9 @@ class CustomGetStartedContainer extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Text(
-            textAlign: TextAlign.center,
-            "Welcome to Daily Planner App",
-            style: TextStyle(
-              fontSize: myHight * .03,
-              fontWeight: FontWeight.bold,
-              color: kWhiteColor,
-            ),
-          ),
+          const TitleText(),
           SizedBox(height: myHight * .015),
-          Text(
-            textAlign: TextAlign.center,
-            "Daily Planner - Organize Your Day. Boost Productivity with Notes, Reminders & Tasks",
-            style: TextStyle(
-              fontSize: myHight * .02,
-              fontWeight: FontWeight.w500,
-              color: kWhiteColor,
-            ),
-          ),
+          const DescriptionText(),
           const Spacer(),
           CustomMaterialButton(
             text: "Get Started",
@@ -58,6 +42,42 @@ class CustomGetStartedContainer extends StatelessWidget {
           ),
           const Spacer(),
         ],
+      ),
+    );
+  }
+}
+
+class TitleText extends StatelessWidget {
+  const TitleText({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final myHight = MediaQuery.of(context).size.height;
+    return Text(
+      textAlign: TextAlign.center,
+      "Welcome to Daily Planner App",
+      style: TextStyle(
+        fontSize: myHight * .03,
+        fontWeight: FontWeight.bold,
+        color: kWhiteColor,
+      ),
+    );
+  }
+}
+
+class DescriptionText extends StatelessWidget {
+  const DescriptionText({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final myHight = MediaQuery.of(context).size.height;
+    return Text(
+      textAlign: TextAlign.center,
+      "Daily Planner - Organize Your Day. Boost Productivity with Notes, Reminders & Tasks",
+      style: TextStyle(
+        fontSize: myHight * .02,
+        fontWeight: FontWeight.w500,
+        color: kWhiteColor,
       ),
     );
   }

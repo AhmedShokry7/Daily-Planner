@@ -6,6 +6,7 @@ class SkipBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final myHight = MediaQuery.of(context).size.height;
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
@@ -17,12 +18,13 @@ class SkipBtn extends StatelessWidget {
               (route) => false,
             );
           },
-          child: const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 32.0),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 32.0),
             child: Text(
               "Skip",
               style: TextStyle(
                 color: kGreyColor,
+                fontSize: myHight * .015,
                 fontWeight: FontWeight.bold,
                 decoration: TextDecoration.underline,
               ),

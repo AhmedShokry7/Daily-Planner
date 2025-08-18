@@ -15,5 +15,6 @@ const String onBoardingThreeImage = "assets/images/onboarding_3.png";
 
 // Colors
 const Color kBlueColor = Color(0xff2B7AF4);
+const Color kLightBlueColor = Color(0xff002055);
 const Color kWhiteColor = Color(0xffFFFFFF);
-const Color kGreyColor = Color.fromARGB(255, 143, 143, 143);
+const Color kGreyColor = Color(0xff8B8B8B);
