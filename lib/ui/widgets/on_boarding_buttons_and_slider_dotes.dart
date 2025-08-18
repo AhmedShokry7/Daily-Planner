@@ -1,3 +1,4 @@
+import 'package:daily_planner/core/data/on_boarding_list.dart';
 import 'package:daily_planner/core/strings.dart';
 import 'package:daily_planner/ui/widgets/next_or_back_btn.dart';
 import 'package:flutter/material.dart';
@@ -17,10 +18,10 @@ class OnBoardingButtonsAndSliderDotes extends StatelessWidget {
           Row(
             children: [
               ...List.generate(
-                3,
-                (context) => AnimatedContainer(
+                onBoardingList.length,
+                (index) => AnimatedContainer(
                   margin: const EdgeInsets.only(right: 8),
-                  height: 10,
+                  height: 30,
                   width: 20,
                   decoration: const BoxDecoration(color: kBlueColor),
                   duration: const Duration(milliseconds: 500),

@@ -1,4 +1,3 @@
-import 'package:daily_planner/core/strings.dart';
 import 'package:daily_planner/ui/widgets/on_boarding_buttons_and_slider_dotes.dart';
 import 'package:daily_planner/ui/widgets/on_boarding_pageview.dart';
 import 'package:daily_planner/ui/widgets/skip_btn.dart';
@@ -13,6 +12,7 @@ class OnBoardingViewBody extends StatelessWidget {
       child: Column(
         children: [
           SkipBtn(),
+          SizedBox(height: 24),
           Expanded(flex: 3, child: OnBoardingPageview()),
           Expanded(child: OnBoardingButtonsAndSliderDotes()),
         ],
