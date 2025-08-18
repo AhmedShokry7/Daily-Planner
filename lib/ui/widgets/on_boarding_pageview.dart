@@ -19,7 +19,6 @@ class OnBoardingPageview extends StatelessWidget {
       controller: pageController,
       onPageChanged: (value) {
         BlocProvider.of<OnBoardingCubit>(context).changePage(value);
-        print("${BlocProvider.of<OnBoardingCubit>(context).currentPage}");
       },
       scrollDirection: Axis.horizontal,
       itemCount: onBoardingList.length,
