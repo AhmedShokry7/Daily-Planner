@@ -2,7 +2,6 @@ import 'package:daily_planner/core/strings.dart';
 import 'package:daily_planner/ui/widgets/app_bar_btn.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:intl/intl.dart';
 
 class CustomAppBar extends StatelessWidget {
   final String title;
@@ -14,7 +13,7 @@ class CustomAppBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const AppBarBtn(image: sideBar),
+          const AppBarBtn(image: notifications),
           Text(
             title,
             style: TextStyle(
