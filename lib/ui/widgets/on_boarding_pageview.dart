@@ -3,15 +3,13 @@ import 'package:daily_planner/core/data/on_boarding_list.dart';
 import 'package:daily_planner/core/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OnBoardingPageview extends StatelessWidget {
   const OnBoardingPageview({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final myHight = MediaQuery.of(context).size.height;
-    final myWidth = MediaQuery.of(context).size.width;
-
     return BlocBuilder<OnBoardingCubit, OnBoardingState>(
       builder: (context, state) {
         final cubit = BlocProvider.of<OnBoardingCubit>(context);
@@ -24,29 +22,25 @@ class OnBoardingPageview extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Image.asset(onBoardingList[index].image),
-              SizedBox(height: myHight * .01),
               Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: myWidth * .05,
-                  vertical: myHight * .02,
-                ),
+                padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 4.h),
                 child: Text(
                   textAlign: TextAlign.center,
                   onBoardingList[index].title,
                   style: TextStyle(
-                    fontSize: myHight * .025,
+                    fontSize: 22.sp,
                     fontWeight: FontWeight.bold,
                     color: kBlueColor,
                   ),
                 ),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: myWidth * .05),
+                padding: EdgeInsets.symmetric(horizontal: 24.w),
                 child: Text(
                   textAlign: TextAlign.center,
                   onBoardingList[index].body,
                   style: TextStyle(
-                    fontSize: myHight * .018,
+                    fontSize: 14.sp,
                     fontWeight: FontWeight.w500,
                     color: kGreyColor,
                   ),

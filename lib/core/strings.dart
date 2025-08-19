@@ -21,9 +21,12 @@ const String profileBold = "assets/icons/profile_bold.png";
 const String settingsRegular = "assets/icons/setting_outline.png";
 const String settingsBold = "assets/icons/setting_bold.png";
 const String trash = "assets/icons/trash_bold.png";
+const String sideBar = "assets/icons/side bar.png";
+const String notifications = "assets/icons/Notifications.png";
 
 // Colors
 const Color kBlueColor = Color(0xff2B7AF4);
-const Color kLightBlueColor = Color(0xff002055);
+const Color kdarkBlueColor = Color(0xff002055);
 const Color kWhiteColor = Color(0xffFFFFFF);
 const Color kGreyColor = Color(0xff8B8B8B);
+const Color kBorderColor = Color(0xffE9F1FF);

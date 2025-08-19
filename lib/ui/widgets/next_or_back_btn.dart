@@ -2,6 +2,7 @@ import 'package:daily_planner/core/cubits/cubit/on_boarding_cubit.dart';
 import 'package:daily_planner/core/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class NextBtn extends StatelessWidget {
   const NextBtn({super.key});
@@ -14,8 +15,8 @@ class NextBtn extends StatelessWidget {
         BlocProvider.of<OnBoardingCubit>(context).nextBtn(context);
       },
       child: Container(
-        height: myHight * .07,
-        width: myHight * .07,
+        height: 42.h,
+        width: 42.h,
         decoration: const BoxDecoration(
           color: kBlueColor,
           shape: BoxShape.circle,
@@ -41,8 +42,8 @@ class BackBtn extends StatelessWidget {
         BlocProvider.of<OnBoardingCubit>(context).backBtn();
       },
       child: Container(
-        height: myHight * .07,
-        width: myHight * .07,
+        height: 42.h,
+        width: 42.h,
         decoration: BoxDecoration(
           border: Border.all(color: kBlueColor, width: 2),
           shape: BoxShape.circle,

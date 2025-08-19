@@ -1,20 +1,15 @@
 import 'package:daily_planner/core/strings.dart';
 import 'package:daily_planner/ui/widgets/custom_material_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class GetStartedContainer extends StatelessWidget {
   const GetStartedContainer({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final myHight = MediaQuery.of(context).size.height;
-    final myWidth = MediaQuery.of(context).size.width;
     return Container(
-      padding: EdgeInsets.symmetric(
-        vertical: myHight * 0.05,
-        horizontal: myWidth * .06,
-      ),
-      width: myWidth,
+      padding: EdgeInsets.symmetric(vertical: 32.h, horizontal: 24.w),
       decoration: const BoxDecoration(
         color: kBlueColor,
         borderRadius: BorderRadius.only(
@@ -25,7 +20,7 @@ class GetStartedContainer extends StatelessWidget {
       child: Column(
         children: [
           const TitleText(),
-          SizedBox(height: myHight * .015),
+          SizedBox(height: 12.h),
           const DescriptionText(),
           const Spacer(),
           CustomMaterialButton(
@@ -40,7 +35,6 @@ class GetStartedContainer extends StatelessWidget {
               );
             },
           ),
-          const Spacer(),
         ],
       ),
     );
@@ -52,12 +46,11 @@ class TitleText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final myHight = MediaQuery.of(context).size.height;
     return Text(
       textAlign: TextAlign.center,
       "Welcome to Daily Planner App",
       style: TextStyle(
-        fontSize: myHight * .03,
+        fontSize: 24.sp,
         fontWeight: FontWeight.bold,
         color: kWhiteColor,
       ),
@@ -70,12 +63,11 @@ class DescriptionText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final myHight = MediaQuery.of(context).size.height;
     return Text(
       textAlign: TextAlign.center,
       "Daily Planner - Organize Your Day. Boost Productivity with Notes, Reminders & Tasks",
       style: TextStyle(
-        fontSize: myHight * .02,
+        fontSize: 16.sp,
         fontWeight: FontWeight.w500,
         color: kWhiteColor,
       ),

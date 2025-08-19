@@ -1,6 +1,7 @@
 import 'package:daily_planner/core/data/pages_list.dart';
 import 'package:daily_planner/core/strings.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BootmNavigationBarView extends StatefulWidget {
   const BootmNavigationBarView({super.key});
@@ -61,12 +62,6 @@ class IconImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final myHeight = MediaQuery.of(context).size.height;
-    return Image.asset(
-      image,
-      height: myHeight * .04,
-      width: myHeight * .04,
-      fit: BoxFit.fill,
-    );
+    return Image.asset(image, height: 28.h, width: 28.h, fit: BoxFit.fill);
   }
 }
